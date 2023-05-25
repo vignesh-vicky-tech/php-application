@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php
+  name: php-deploy
 spec:
  replicas: 3
  selector:
@@ -14,7 +14,7 @@ spec:
    spec:                  
      containers:
      - name: php-app
-       image: vigneshvicky12345/php-app:latest
+       image: vigneshvicky12345/maven:latest
        imagePullPolicy: Always
        ports:
        - containerPort: 80
